@@ -43,7 +43,7 @@ resource "aws_security_group_rule" "ec" {
 }
 
 
-resource "aws_vpc_security_group_egress_rule" "rds" {
+resource "aws_vpc_security_group_egress_rule" "ec" {
   security_group_id = aws_security_group.ec.id
   cidr_ipv4         = "0.0.0.0/0"
   ip_protocol       = "-1" # semantically equivalent to all ports
