@@ -1,6 +1,6 @@
 resource "aws_elasticache_subnet_group" "ec" {
   name       = "${local.name_prefix}-subnet-group"
-  subnet_ids = [var.subnet_ids]
+  subnet_ids = var.subnet_ids
   tags = var.tags
 }
 
